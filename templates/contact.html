@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Contact Me</h1>
+
+    {%  if first_name %}
+
+<h2>Thank you for completing my form.</h2>
+    <p>First Name: {{ first_name }}</p>
+    <p>Last Name: {{ last_name }}</p>
+    <p>Email: {{ email }}</p>
+    <p>Major: {{ major }}</p>
+
+{% else %}
+    <form method="post">
+
+<div class="mb-3">
+    <label class="form-label">First Name</label>
+        <input type="text" class="form-control" name="first_name">
+</div>
+
+<div class="mb-3">
+    <label class="form-label">Last Name</label>
+        <input type="text" class="form-control" name="last_name">
+</div>
+
+<div class="mb-3">
+    <label class="form-label">Email Address</label>
+        <input type="email" class="form-control" name="email">
+</div>
+
+<div class="mb-3">
+    <label class="form-label">Major</label>
+        <input type="text" class="form-control" name="major">
+</div>
+
+<button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+
+{%  endif %}
+
+{% endblock %}
