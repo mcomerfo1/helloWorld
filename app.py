@@ -43,10 +43,10 @@ def contact():
             last_name=last_name,
             email=email,
             major=major,
-            title='Contact Form'
+            title='Contact'
         )
 
-    return render_template('contact.html')
+    return render_template('contact.html', title='Contact')
 
 if __name__ == '__main__':
     app.run()
